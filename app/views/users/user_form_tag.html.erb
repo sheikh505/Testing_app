@@ -1,0 +1,43 @@
+
+
+
+
+
+<%=form_tag user_age_list_users_path method: :get   do   %>
+
+
+
+  <%=label_tag :age %>
+  <%#=text_field_tag(:age) %>
+
+
+<!--  <select name="age" id="user_age">-->
+<!--    <option value="selected"> select age</option>-->
+
+<!--    <option value="11"> 11</option>-->
+
+<!--    <option value="11"> 12</option>-->
+
+<!--    <option value="11"> 13</option>-->
+
+<!--    <option value="11"> 22</option>-->
+<!--  </select>-->
+
+
+
+
+   <%= select_tag(:age, options_for_select(["select value",4, 22 ,5,25],)) %>
+   <br>
+
+   <%=select_date Date.today, prefix: :start_date %>
+   <br>
+
+  <%=date_select :users, :birth_date  %>
+
+
+
+  <%=submit_tag "User " %>
+
+
+
+<% end %>
